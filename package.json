@@ -1,0 +1,29 @@
+{
+  "name": "react-native-staggering",
+  "version": "1.0.0",
+  "description": "Staggering views",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johan-dutoit/react-native-staggering.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "stagger",
+    "animation"
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react-native": "0.52.2"
+  },
+  "author": "Johan du Toit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Johan-dutoit/react-native-staggering/issues"
+  },
+  "homepage": "https://github.com/Johan-dutoit/react-native-staggering#readme"
+}
