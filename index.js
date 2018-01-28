@@ -10,11 +10,11 @@ class Staggering extends React.Component {
     componentDidMount = () => {
         let animations = this.state.animations.map((animation) => Animated.timing(animation, {
             toValue: 1,
-            duration: 500,
-            useNativeDriver: true
+            duration: this.props.duration,
+            useNativeDriver: this.props.useNativeDriver
         }));
 
-        Animated.stagger(200, animations).start();
+        Animated.stagger(this.props.staggerDelay, animations).start();
     }
 
     render = () => {
@@ -36,12 +36,14 @@ class Staggering extends React.Component {
 
 Staggering.propTypes = {
     duration: propTypes.number,
-    staggerDelay: propTypes.number
+    staggerDelay: propTypes.number,
+    useNativeDriver: propTypes.bool
 };
 
 Staggering.defaultValues = {
     duration: 300,
-    staggerDelay: 200
+    staggerDelay: 200,
+    useNativeDriver: true
 };
 
 export default Staggering;
