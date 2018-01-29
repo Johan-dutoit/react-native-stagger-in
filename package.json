@@ -1,7 +1,7 @@
 {
-  "name": "react-native-staggering",
+  "name": "react-native-stagger-in",
   "version": "1.0.0",
-  "description": "Staggering views",
+  "description": "Stagger in views",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
     "stagger",
     "animation"
   ],
-  "dependencies": {
+  "devDependencies": {
     "prop-types": "^15.6.0",
     "react-native": "0.52.2"
   },
