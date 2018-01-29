@@ -37,12 +37,12 @@ import StaggerIn from 'react-native-stagger-in';
 Then use as follows
 ```js
     <StaggerIn>
-            <Animated.View key={index}>
-                <Text>View 1</Text>
-            </Animated.View>
-            <Animated.View>
-                <Text>View 2</Text>
-            </Animated.View>
+        <Animated.View>
+            <Text>View 1</Text>
+        </Animated.View>
+        <Animated.View>
+            <Text>View 2</Text>
+        </Animated.View>
     </StaggerIn>
 ```
 

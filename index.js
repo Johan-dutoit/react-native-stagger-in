@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { Animated } from 'react-native';
 
-class Staggering extends React.Component {
+class StaggerIn extends React.Component {
     state = {
         animations: this.props.children.map(() => new Animated.Value(0))
     }
@@ -34,16 +34,16 @@ class Staggering extends React.Component {
     }
 }
 
-Staggering.propTypes = {
+StaggerIn.propTypes = {
     duration: propTypes.number,
     staggerDelay: propTypes.number,
     useNativeDriver: propTypes.bool
 };
 
-Staggering.defaultValues = {
+StaggerIn.defaultValues = {
     duration: 300,
     staggerDelay: 200,
     useNativeDriver: true
 };
 
-export default Staggering;
+export default StaggerIn;
