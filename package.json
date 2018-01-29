@@ -1,6 +1,6 @@
 {
   "name": "react-native-stagger-in",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Stagger in views",
   "main": "index.js",
   "scripts": {
