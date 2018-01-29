@@ -40,7 +40,7 @@ StaggerIn.propTypes = {
     useNativeDriver: propTypes.bool
 };
 
-StaggerIn.defaultValues = {
+StaggerIn.defaultProps = {
     duration: 300,
     staggerDelay: 200,
     useNativeDriver: true
