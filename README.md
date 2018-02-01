@@ -10,6 +10,7 @@ Staggered views made simple
 ## Quick Access
 * <a href='#install'>Installation</a>
 * <a href='#preview'>Preview</a>
+* <a href='#expo'>Expo</a>
 * <a href='#usage'>Usage</a>
 * <a href='#properties'>Properties</a>
 * <a href='#contributing'>Contributing</a>
@@ -26,6 +27,9 @@ npm install react-native-stagger-in --save
 
 ![](https://github.com/Johan-dutoit/react-native-stagger-in/blob/master/preview.gif)
 
+## <a name='expo'>Expo</a>
+
+You can find the Expo snack here: <a href='https://snack.expo.io/@johan-dev/staggerin'>https://snack.expo.io/@johan-dev/staggerin</a>
 
 ## <a name='usage'>Usage</a>
 Simply import the component 
@@ -36,15 +40,16 @@ import StaggerIn from 'react-native-stagger-in';
 
 Then use as follows
 ```js
-    <StaggerIn>
-        <Animated.View>
-            <Text>View 1</Text>
-        </Animated.View>
-        <Animated.View>
-            <Text>View 2</Text>
-        </Animated.View>
-    </StaggerIn>
+<StaggerIn>
+    <Animated.View>
+        <Text>View 1</Text>
+    </Animated.View>
+    <Animated.View>
+        <Text>View 2</Text>
+    </Animated.View>
+</StaggerIn>
 ```
+
 
 ###### <a href='#top'>Top</a>
 
