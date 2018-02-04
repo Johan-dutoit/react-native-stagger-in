@@ -18,6 +18,10 @@ class StaggerIn extends React.Component {
     }
 
     render = () => {
+        if (this.props.children == null) {
+            return null;
+        }
+
         return this.props.children.map(this.renderChild);
     }
 
