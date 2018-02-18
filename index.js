@@ -3,51 +3,74 @@ import propTypes from 'prop-types';
 import { Animated } from 'react-native';
 
 class StaggerIn extends React.Component {
-    state = {
-        animations: this.props.children.map(() => new Animated.Value(0))
+  state = {
+    animations: null,
+  };
+
+  constructor(props) {
+    super(props);
+
+    if (this.props.children == null) {
+      return;
     }
 
-    componentDidMount = () => {
-        let animations = this.state.animations.map((animation) => Animated.timing(animation, {
-            toValue: 1,
-            duration: this.props.duration,
-            useNativeDriver: this.props.useNativeDriver
-        }));
+    this.state = {
+      animations: this.props.children.map(() => new Animated.Value(0)),
+    };
+  }
 
-        Animated.stagger(this.props.staggerDelay, animations).start();
+  componentDidMount = () => {
+    if (this.state.animations == null) {
+      return;
     }
 
-    render = () => {
-        if (this.props.children == null) {
-            return null;
-        }
+    let animations = this.state.animations.map(animation =>
+      Animated.timing(animation, {
+        toValue: 1,
+        duration: this.props.duration,
+        useNativeDriver: this.props.useNativeDriver,
+      })
+    );
 
-        return this.props.children.map(this.renderChild);
+    Animated.stagger(this.props.staggerDelay, animations).start();
+  };
+
+  render = () => {
+    if (this.props.children == null) {
+      return null;
     }
 
-    renderChild = (child, index) => {
-        let style = [child.props.style, {
-            opacity: this.state.animations[index],
-        }]
+    return this.props.children.map(this.renderChild);
+  };
 
-        let childToRender = React.cloneElement(child, {
-            style
-        })
-
-        return childToRender;
+  renderChild = (child, index) => {
+    console.log(child.type);
+    if (child == null) {
+      return null;
     }
+
+    let style = {
+      opacity: this.state.animations[index]
+    };
+
+    return (
+      <Animated.View style={style}>
+        {child}
+      </Animated.View>
+    );
+  };
 }
 
 StaggerIn.propTypes = {
-    duration: propTypes.number,
-    staggerDelay: propTypes.number,
-    useNativeDriver: propTypes.bool
+  duration: propTypes.number,
+  staggerDelay: propTypes.number,
+  useNativeDriver: propTypes.bool,
 };
 
 StaggerIn.defaultProps = {
-    duration: 300,
-    staggerDelay: 200,
-    useNativeDriver: true
+  duration: 300,
+  staggerDelay: 200,
+  useNativeDriver: true,
 };
 
 export default StaggerIn;
