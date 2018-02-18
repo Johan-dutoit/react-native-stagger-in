@@ -44,7 +44,6 @@ class StaggerIn extends React.Component {
   };
 
   renderChild = (child, index) => {
-    console.log(child.type);
     if (child == null) {
       return null;
     }
