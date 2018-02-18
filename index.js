@@ -53,7 +53,7 @@ class StaggerIn extends React.Component {
     };
 
     return (
-      <Animated.View style={style}>
+      <Animated.View style={style} key={index}>
         {child}
       </Animated.View>
     );
